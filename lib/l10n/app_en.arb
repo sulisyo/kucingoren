@@ -1,0 +1,13 @@
+{
+  "appTitle": "Demo App",
+  "inputForm": "Input Form",
+  "simpleHomePage": "Simple Home Page",
+  "increment": "Increment",
+  "currentValue": "Current Value",
+  "soManyPushed": "You have pushed the button this many times:",
+  "simpleStateTitle": "Simple State Management",
+  "orenCatSleeping": "Oren Cat love Sleeping",
+  "orenCatEating": "Oren Cat eating forever",
+  "orenCatLaughing": "Oren cat .....",
+  "orenCatRunning": "Oren cat flew "
+}

@@ -1,0 +1,13 @@
+{
+  "appTitle": "Demo App",
+  "inputForm": "Isian bakpau",
+  "simpleHomePage": "Warung sederhana",
+  "increment": "Penambahan",
+  "currentValue": "Nilai sekarang",
+  "soManyPushed": "Sudah dipencet berkali kali:",
+  "simpleStateTitle": "Sederhana harapan",
+  "orenCatSleeping": "Kucing oren tukang molor",
+  "orenCatEating": "Kucing oren banyak makan",
+  "orenCatLaughing": "Kucing oren gak ada empati",
+  "orenCatRunning": "Kucing oren kabur"
+}
