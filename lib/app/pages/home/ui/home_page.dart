@@ -1,13 +1,10 @@
 import 'package:oren/app/feature_a/presentation/input_form_page.dart';
 import 'package:oren/app/feature_a/presentation/simple_home_page.dart';
 import 'package:oren/app/feature_a/presentation/welcome_screen.dart';
-import 'package:oren/app/utils/app_routes.dart';
-import 'package:oren/app/utils/translations/translation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:oren/app/pages/home/controller/home_page_controller.dart';
 import '../../../../l10n/app_localizations.dart';
-import '../../../utils/string_r.dart';
 import 'package:get_it/get_it.dart';
 
 

@@ -10,7 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../../l10n/app_localizations_id.dart';
-import '../../utils/themes/theme_controller.dart';
+import '../../core/utils/themes/theme_controller.dart';
 import '../bloc/count_bloc.dart';
 import '../bloc/rick_characters_bloc.dart';
 import '../data/api/api_one.dart';

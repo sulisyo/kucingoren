@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:oren/app/application.dart';
-import 'package:oren/app/utils/global_error_handler.dart';
 
+import 'app/core/global_error_handler.dart';
 import 'app/feature_a/di/injection.dart';
 
 void main() async{

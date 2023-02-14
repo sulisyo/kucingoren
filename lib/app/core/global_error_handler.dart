@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-import 'mixins/app_logger.dart';
+import 'package:oren/app/core/utils/mixins/app_logger.dart';
 
 class GlobalErrorHandler  with AppLogger{
   GlobalErrorHandler({required Widget child}) {

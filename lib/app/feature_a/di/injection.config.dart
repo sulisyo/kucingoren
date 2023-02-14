@@ -12,12 +12,12 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:shared_preferences/shared_preferences.dart' as _i11;
 
 import '../../../l10n/app_localizations.dart' as _i3;
-import '../../utils/themes/theme_controller.dart' as _i12;
+import '../../core/utils/themes/theme_controller.dart' as _i12;
 import '../bloc/count_bloc.dart' as _i5;
 import '../bloc/rick_characters_bloc.dart' as _i10;
-import '../data/api/api_interceptor.dart' as _i14;
 import '../data/api/api_one.dart' as _i7;
 import '../data/api/rick_and_morty_service.dart' as _i9;
+import '../data/interceptor/api_interceptor.dart' as _i14;
 import '../data/repository/rick_and_morty_respository.dart' as _i8;
 import '../data/repository/token_repository.dart' as _i13;
 import 'module_injector.dart' as _i15; // ignore_for_file: unnecessary_lambdas

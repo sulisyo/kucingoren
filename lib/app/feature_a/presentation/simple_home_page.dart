@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../utils/themes/theme_controller.dart';
-import '../../utils/themes/themes.dart';
+import '../../core/utils/themes/theme_controller.dart';
+import '../../core/utils/themes/themes.dart';
 import '../bloc/count_bloc.dart';
 
 class SimpleHomePage extends StatelessWidget {

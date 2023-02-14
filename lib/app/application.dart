@@ -1,13 +1,14 @@
-import 'package:oren/app/utils/themes/theme_controller.dart';
-import 'package:oren/app/utils/themes/themes.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:oren/app/utils/app_routes.dart';
-import 'package:oren/app/utils/translations/messages.dart';
-import 'package:oren/app/utils/app_constants.dart';
 
 import '../l10n/app_localizations.dart';
+import 'core/app_constants.dart';
+import 'core/app_routes.dart';
+import 'core/utils/themes/theme_controller.dart';
+import 'core/utils/themes/themes.dart';
+import 'core/utils/translations/messages.dart';
 
 class Application extends StatefulWidget {
   const Application({Key? key}) : super(key: key);
