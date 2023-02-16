@@ -1,3 +1,4 @@
+import 'package:oren/app/feature_a/presentation/empty_home/sample_empty_home.dart';
 import 'package:oren/app/feature_a/presentation/input_form_page.dart';
 import 'package:oren/app/feature_a/presentation/simple_home_page.dart';
 import 'package:oren/app/feature_a/presentation/welcome_screen.dart';
@@ -27,7 +28,8 @@ class HomePage extends GetView<HomePageController> {
               ElevatedButton(onPressed: () => controller.increment(), child: const Text("Increment")),
               ElevatedButton(onPressed: () => Get.to(SimpleHomePage()), child: const Text("Simple Home Page")),
               ElevatedButton(onPressed: () => Get.to(const InputFormPage()), child: const Text("Input Form")),
-              ElevatedButton(onPressed: () => Get.to( WelcomeScreen()), child: const Text("Welcome Screen"))
+              ElevatedButton(onPressed: () => Get.to( WelcomeScreen()), child: const Text("Welcome Screen")),
+              ElevatedButton(onPressed: () => Get.to( SampleEmptyHome()), child: const Text("Complex Home"))
             ],
           ),
         ),

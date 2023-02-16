@@ -1,3 +1,4 @@
+import 'package:oren/app/feature_a/presentation/empty_home/sample_empty_home.dart';
 import 'package:oren/app/feature_a/presentation/input_form_page.dart';
 import 'package:oren/app/feature_a/presentation/rick_character_page.dart';
 import 'package:oren/app/feature_a/presentation/simple_home_page.dart';
@@ -17,6 +18,7 @@ abstract class _Paths {
   static const String RICK_CHARACTERS = '/rick_characters';
   static const String INPUT_FORM = '/input_form';
   static const String WELCOME = '/welcome';
+  static const String COMBO_HOME = '/combo_home';
 }
 
 class AppRoutes {
@@ -35,5 +37,6 @@ class AppRoutes {
     GetPage(name: _Paths.RICK_CHARACTERS, page: () => RickCharactersPage()),
     GetPage(name: _Paths.INPUT_FORM, page: () => InputFormPage()),
     GetPage(name: _Paths.WELCOME, page: () => WelcomeScreen()),
+    GetPage(name: _Paths.COMBO_HOME, page: () => SampleEmptyHome()),
   ];
 }
