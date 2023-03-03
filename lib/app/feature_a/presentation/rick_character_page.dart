@@ -109,8 +109,8 @@ class RickCharactersPage extends StatelessWidget {
                       child: Shimmer.fromColors(
                           baseColor: Colors.grey.shade200,
                           highlightColor: Colors.white,
-                          child: DecoratedBox(
-                            decoration: const BoxDecoration(color: Colors.red),
+                          child: const DecoratedBox(
+                            decoration: BoxDecoration(color: Colors.red),
                           ))));
               // You can use LinearProgressIndicator or CircularProgressIndicator instead
             },

@@ -6,10 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:oren/app/feature_a/data/repository/token_repository.dart';
+import 'package:oren/app/pages/home/controller/home_page_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../l10n/app_localizations.dart';
 import '../../../l10n/app_localizations_id.dart';
+import '../../core/AppState.dart';
 import '../../core/utils/themes/theme_controller.dart';
 import '../bloc/count_bloc.dart';
 import '../bloc/rick_characters_bloc.dart';
@@ -54,4 +56,9 @@ abstract class RegisterModule {
   @lazySingleton
   AppLocalizations localizations() => AppLocalizationsId();
 
+  @lazySingleton
+  AppState get appState => AppState();
+
+  @lazySingleton
+  HomePageController get homepageController => HomePageController();
 }

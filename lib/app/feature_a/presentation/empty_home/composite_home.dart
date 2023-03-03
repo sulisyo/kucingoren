@@ -40,7 +40,8 @@ class _CompositeHomeState extends State<CompositeHome>
           expandedHeight: 250.0,
           title: getAppBarUI(),
           flexibleSpace: FlexibleSpaceBar(
-            title: Text("dfdf"),
+            title: Text("dfdf",
+            style: AlohaTheme.of(context).textTheme.titleHeroStaticWhite,),
           ),
         ),
         SliverPadding(
@@ -238,12 +239,7 @@ class _CompositeHomeState extends State<CompositeHome>
                       child: Text(
                         "Title",
                         textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          letterSpacing: 0.27,
-                          color: Colors.black,
-                        ),
+                        style: AlohaTheme.of(context).textTheme.titleHeroDefault,
                       ),
                     ),
                     Padding(
@@ -251,12 +247,7 @@ class _CompositeHomeState extends State<CompositeHome>
                       child: Text(
                         "Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 Long text 1 ",
                         textAlign: TextAlign.left,
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 12,
-                          letterSpacing: 0.27,
-                          color: Colors.black,
-                        ),
+                        style:AlohaTheme.of(context).textTheme.bodyModerateDefault,
                       ),
                     ),
                   ],
@@ -287,7 +278,7 @@ class _CompositeHomeState extends State<CompositeHome>
             return Container(
               alignment: Alignment.center,
               color: Colors.lightBlue[100 * (index % 9)],
-              child: Text('List Item $index'),
+              child: Text('List Item $index', style: AlohaTheme.of(context).textTheme.bodyModerateDefault,),
             );
           }, childCount: 16),
         ),
@@ -308,60 +299,67 @@ class _CompositeHomeState extends State<CompositeHome>
     } else if (CategoryType.basic == categoryTypeData) {
       txt = 'Basic UI';
     }
-    return Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-            boxShadow: getBoxShadow(),
-            color: isSelected ? Colors.blue : Colors.white,
-            borderRadius: const BorderRadius.all(Radius.circular(24.0)),
-            border: Border.all(color: Colors.blue)),
-        child: Material(
-          color: Colors.transparent,
-          child: InkWell(
-            splashColor: Colors.white24,
-            borderRadius: const BorderRadius.all(Radius.circular(24.0)),
-            onTap: () {
-              setState(() {
-                categoryType = categoryTypeData;
-              });
-            },
-            child: shrinkAnimated(
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Row(children: [
-                  Image.asset(
-                    'assets/image2/tab_1.png',
-                    width: 30,
-                    height: 30,
-                  ),
-                  Expanded(
-                    child: Text(
-                      txt,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                        letterSpacing: 0.27,
-                        color: isSelected ? Colors.white : Colors.blue,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                    width: 26,
-                    child: Icon(
-                      Icons.arrow_forward,
-                      color: Colors.black,
-                      size: 18,
-                    ),
-                  ),
-                ]),
-              ),
-            ),
-          ),
-        ),
-      ),
+
+    return AlohaPrimaryButton.contextual(
+        Text('Basic UI')
+        , onTap: () => {},
+      icon: Icon(Icons.circle),
+      infoText: Text('UI'),
     );
+    // return Expanded(
+    //   child: Container(
+    //     decoration: BoxDecoration(
+    //         boxShadow: getBoxShadow(),
+    //         color: isSelected ? Colors.blue : Colors.white,
+    //         borderRadius: const BorderRadius.all(Radius.circular(24.0)),
+    //         border: Border.all(color: Colors.blue)),
+    //     child: Material(
+    //       color: Colors.transparent,
+    //       child: InkWell(
+    //         splashColor: Colors.white24,
+    //         borderRadius: const BorderRadius.all(Radius.circular(24.0)),
+    //         onTap: () {
+    //           setState(() {
+    //             categoryType = categoryTypeData;
+    //           });
+    //         },
+    //         child: shrinkAnimated(
+    //           child: Padding(
+    //             padding: const EdgeInsets.all(10),
+    //             child: Row(children: [
+    //               Image.asset(
+    //                 'assets/image2/tab_1.png',
+    //                 width: 30,
+    //                 height: 30,
+    //               ),
+    //               Expanded(
+    //                 child: Text(
+    //                   txt,
+    //                   textAlign: TextAlign.left,
+    //                   style: TextStyle(
+    //                     fontWeight: FontWeight.w600,
+    //                     fontSize: 18,
+    //                     letterSpacing: 0.27,
+    //                     color: isSelected ? Colors.white : Colors.blue,
+    //                   ),
+    //                 ),
+    //               ),
+    //               SizedBox(
+    //                 height: 20,
+    //                 width: 26,
+    //                 child: Icon(
+    //                   Icons.arrow_forward,
+    //                   color: Colors.black,
+    //                   size: 18,
+    //                 ),
+    //               ),
+    //             ]),
+    //           ),
+    //         ),
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 
   final double topBarOpacity = 0.8;

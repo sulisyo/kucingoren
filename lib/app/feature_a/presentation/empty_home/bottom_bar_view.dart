@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'package:asphalt_aloha/asphalt_aloha.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -147,11 +148,11 @@ class _BottomBarViewState extends State<BottomBarView>
                     child: Container(
                       // alignment: Alignment.center,s
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: AlohaTheme.of(context).colors.fillActivePrimary,
                         gradient: LinearGradient(
                             colors: [
-                              Colors.blue,
-                              HexColor('#6A88E5'),
+                              AlohaTheme.of(context).colors.fillActivePrimary,
+                              AlohaTheme.of(context).colors.fillActivePrimary,
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight),
