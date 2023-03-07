@@ -1,3 +1,4 @@
+import 'package:asphalt_aloha/asphalt_aloha.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,38 +9,15 @@ class ProfileBodyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var vokasiLightGrey = GoogleFonts.poppins(
-      fontSize: 12.0,
-      color: const Color(0xff8B8B8B),
-    );
-    var vkTextGrey = GoogleFonts.poppins(
-      fontSize: 12.0,
-      fontWeight: FontWeight.w500,
-      color: const Color(0xff484848),
-    );
-    var vkTextLightGrey = GoogleFonts.poppins(
-      fontSize: 12.0,
-      fontWeight: FontWeight.w600,
-      color: const Color(0x80484848),
-    );
-    var vkTextCardLight = GoogleFonts.poppins(
-      fontSize: 14.0,
-      color: Colors.white,
-      fontWeight: FontWeight.normal,
-    );
-    var vkTextCardBold = GoogleFonts.poppins(
-      fontSize: 14.0,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    );
-
+    AlohaTextTheme textTheme = AlohaTheme.of(context).textTheme;
+    AlohaThemeData alohaThemeData = AlohaTheme.of(context);
     Widget nganu = Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
         children: [
           Container(
             padding: const EdgeInsets.all(1.0),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
                   color: Colors.black26,
@@ -50,11 +28,11 @@ class ProfileBodyScreen extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(50.0),
               ),
-              color: Color(0xffee8301),
+              color: alohaThemeData.colors.fillBackgroundQuaternary,
             ),
-            child: Hero(
+            child: const Hero(
               tag: 'avatar',
-              child: const CircleAvatar(
+              child: CircleAvatar(
                 backgroundImage: AssetImage('assets/image2/profile_pic.png'),
                 radius: 50.0,
               ),
@@ -74,14 +52,14 @@ class ProfileBodyScreen extends StatelessWidget {
           ),
           Text(
             'ridho.caraka@unpak.ac.id',
-            style: vokasiLightGrey,
+            style: textTheme.bodyModerateActive,
           ),
           Text(
             '081512348765',
-            style: vokasiLightGrey,
+            style: textTheme.bodyModerateActive,
           ),
           // const Spacer(),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           // Card for brief info
@@ -95,9 +73,9 @@ class ProfileBodyScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text('NPM', style: vkTextCardLight),
+                    Text('NPM', style: textTheme.bodyModerateDefault),
                     const Spacer(),
-                    Text('08151234', style: vkTextCardBold),
+                    Text('08151234', style: textTheme.bodyModerateDefault),
                     const SizedBox(width: 9.0),
                     const Icon(
                       Icons.copy,
@@ -106,28 +84,28 @@ class ProfileBodyScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Divider(color: Colors.white),
+                const AlohaDivider(dividerType: DividerType.plain),
                 Row(
                   children: [
-                    Text('Status Keaktifan', style: vkTextCardLight),
+                    Text('Status Keaktifan', style: textTheme.bodyModerateDefault),
                     const Spacer(),
-                    Text('Aktif', style: vkTextCardBold),
+                    Text('Aktif', style: textTheme.bodyModerateDefault),
                   ],
                 ),
-                const Divider(color: Colors.white),
+                const AlohaDivider(dividerType: DividerType.plain),
                 Row(
                   children: [
-                    Text('Program Studi', style: vkTextCardLight),
+                    Text('Program Studi', style: textTheme.bodyModerateDefault),
                     const Spacer(),
-                    Text('Manajemen Informatika', style: vkTextCardBold),
+                    Text('Manajemen Informatika', style: textTheme.bodyModerateDefault),
                   ],
                 ),
-                const Divider(color: Colors.white),
+                const AlohaDivider(dividerType: DividerType.plain),
                 Row(
                   children: [
-                    Text('Jenjang Pendidikan', style: vkTextCardLight),
+                    Text('Jenjang Pendidikan', style: textTheme.bodyModerateDefault),
                     const Spacer(),
-                    Text('Diploma 3', style: vkTextCardBold),
+                    Text('Diploma 3', style: textTheme.bodyModerateDefault),
                   ],
                 ),
               ],
@@ -141,44 +119,44 @@ class ProfileBodyScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 12.0, right: 12.0),
             child: Row(
               children: [
-                Text('Nama Lengkap', style: vkTextGrey),
+                Text('Nama Lengkap', style: textTheme.bodyModerateActive),
                 const Spacer(),
-                Text('Ridho Caraka', style: vkTextLightGrey),
+                Text('Ridho Caraka', style: textTheme.bodyModerateActive),
               ],
             ),
           ),
-          const Divider(color: Color(0xffee8301)),
+          const AlohaDivider(dividerType: DividerType.plain),
           Padding(
             padding: const EdgeInsets.only(left: 12.0, right: 12.0),
             child: Row(
               children: [
-                Text('Panggilan', style: vkTextGrey),
+                Text('Panggilan', style: textTheme.bodyModerateActive),
                 const Spacer(),
-                Text('Caraka', style: vkTextLightGrey),
+                Text('Caraka', style: textTheme.bodyModerateActive),
               ],
             ),
           ),
-          const Divider(color: Color(0xffee8301)),
+          const AlohaDivider(dividerType: DividerType.plain),
           Padding(
             padding: const EdgeInsets.only(left: 12.0, right: 12.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Alamat Rumah', style: vkTextGrey),
+                Text('Alamat Rumah', style: textTheme.bodyModerateActive),
                 const SizedBox(height: 6.0),
                 Text(
                   'Jl. Anyelir Raya, No 21, Kelurahan Cilendek Barat, Kecamatan Bogor Tengah, Bogor, Jawa Barat, Indonesia, 16115',
-                  style: vkTextLightGrey,
+                  style: textTheme.bodyModerateActive,
                 ),
               ],
             ),
           ),
-          const Divider(color: Color(0xffee8301)),
+          const AlohaDivider(dividerType: DividerType.plain),
           Padding(
             padding: const EdgeInsets.only(left: 12.0, right: 12.0),
             child: Row(
               children: [
-                Text('Kartu Mahasiswa', style: vkTextGrey),
+                Text('Kartu Mahasiswa', style: textTheme.bodyModerateActive),
                 const Spacer(),
                 const Icon(Icons.badge),
               ],

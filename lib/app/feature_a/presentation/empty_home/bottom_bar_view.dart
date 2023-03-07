@@ -56,7 +56,7 @@ class _BottomBarViewState extends State<BottomBarView>
                                 parent: animationController!,
                                 curve: Curves.fastOutSlowIn))
                             .value *
-                        38.0),
+                        1.0),
                 child: Column(
                   children: <Widget>[
                     SizedBox(
@@ -137,52 +137,58 @@ class _BottomBarViewState extends State<BottomBarView>
               child: SizedBox(
                 width: 38 * 2.0,
                 height: 38 * 2.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ScaleTransition(
-                    alignment: Alignment.center,
-                    scale: Tween<double>(begin: 0.0, end: 1.0).animate(
-                        CurvedAnimation(
-                            parent: animationController!,
-                            curve: Curves.fastOutSlowIn)),
-                    child: Container(
-                      // alignment: Alignment.center,s
-                      decoration: BoxDecoration(
-                        color: AlohaTheme.of(context).colors.fillActivePrimary,
-                        gradient: LinearGradient(
-                            colors: [
-                              AlohaTheme.of(context).colors.fillActivePrimary,
-                              AlohaTheme.of(context).colors.fillActivePrimary,
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight),
-                        shape: BoxShape.circle,
-                        boxShadow: <BoxShadow>[
-                          BoxShadow(
-                              color: Colors.blue.withOpacity(0.4),
-                              offset: const Offset(8.0, 16.0),
-                              blurRadius: 16.0),
-                        ],
-                      ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                            splashColor: Colors.white.withOpacity(0.1),
-                            highlightColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            onTap: widget.addClick,
-                            onTapDown: (it) => actionButtonAnimationController
-                              ?..reset()
-                              ..forward(),
-                            onTapCancel: () =>
-                                actionButtonAnimationController?.reverse(),
-                            child: ColorFiltered(
-                              colorFilter: ColorFilter.mode(
-                                  Colors.white, BlendMode.srcIn),
-                              child: Lottie.asset('assets/image2/qr_kot.json',
-                                  repeat: false,
-                                  controller: actionButtonAnimationController),
-                            )),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: AlohaTheme.of(context).colors.fillBackgroundPrimary,
+                    shape: BoxShape.circle,
+                    boxShadow: <BoxShadow>[
+                      AlohaTheme.of(context).shadow.shadowHigh.toBoxShadow()
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ScaleTransition(
+                      alignment: Alignment.center,
+                      scale: Tween<double>(begin: 0.0, end: 1.0).animate(
+                          CurvedAnimation(
+                              parent: animationController!,
+                              curve: Curves.fastOutSlowIn)),
+                      child: Container(
+                        // alignment: Alignment.center,s
+                        decoration: BoxDecoration(
+                          color: AlohaTheme.of(context).colors.iconDynamicInactive,
+                          gradient: LinearGradient(
+                              colors: [
+                                AlohaTheme.of(context).colors.fillActiveSecondary,
+                                AlohaTheme.of(context).colors.fillActivePrimary,
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight),
+                          shape: BoxShape.circle,
+                          boxShadow: <BoxShadow>[
+                            AlohaTheme.of(context).shadow.shadowHigh.toBoxShadow()
+                          ],
+                        ),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                              splashColor: Colors.white.withOpacity(0.1),
+                              highlightColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              onTap: widget.addClick,
+                              onTapDown: (it) => actionButtonAnimationController
+                                ?..reset()
+                                ..forward(),
+                              onTapCancel: () =>
+                                  actionButtonAnimationController?.reverse(),
+                              child: ColorFiltered(
+                                colorFilter: ColorFilter.mode(
+                                    Colors.white, BlendMode.srcIn),
+                                child: Lottie.asset('assets/image2/qr_kot.json',
+                                    repeat: false,
+                                    controller: actionButtonAnimationController),
+                              )),
+                        ),
                       ),
                     ),
                   ),
@@ -191,6 +197,7 @@ class _BottomBarViewState extends State<BottomBarView>
             ),
           ),
         ),
+        Text("sssss"),
       ],
     );
   }
@@ -242,6 +249,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    AlohaThemeData alohaThemeData = AlohaTheme.of(context);
     return AspectRatio(
       aspectRatio: 1,
       child: Center(
@@ -272,10 +280,10 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                             Interval(0.1, 1.0, curve: Curves.fastOutSlowIn))),
                 child: ColorFiltered(
                     colorFilter: ColorFilter.mode(
-                        Colors.grey,
                         widget.tabIconData!.isSelected
-                            ? BlendMode.dstIn
-                            : BlendMode.srcIn),
+                            ? alohaThemeData.colors.iconDynamicActive
+                            : alohaThemeData.colors.iconDynamicInactive,
+                        BlendMode.srcIn),
                     child: Column(children: [
                       Lottie.asset(widget.tabIconData!.imagePath,
                           // repeat: false,

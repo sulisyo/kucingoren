@@ -72,7 +72,7 @@ class AppRoutes {
   static Widget getAlohaApp() {
 
     return AlohaApp(
-      theme: AlohaThemeData.purpleThemeLight(),
+      theme: AlohaThemeData.gopayThemeLight(),
       darkTheme: AlohaThemeData.gopayThemeDark(),
       themeMode: AlohaThemeMode.light,
       initialRoute: AppRoutes.initialRoute,

@@ -28,7 +28,7 @@ dependencies:
     git:
       url: git@source.golabs.io:asphalt/asphalt-aloha-flutter.git
       path: asphalt_aloha
-      ref: 0.0.43
+      ref: 0.0.44
 
   flutter_localizations:
     sdk: flutter
@@ -53,6 +53,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
+  tagihan:
+    path: e:/code/gopay-consumer/tagihan
+
+  common_widgets:
+    path: e:/code/gopay-consumer/shared/common_widgets
+
+#  home:
+#    path: e:/code/gopay-consumer/consumer/home
+  barcode:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -72,7 +82,47 @@ flutter:
     - assets/
     - assets/animations/
     - assets/image2/
+    - # Illustrations
+    - packages/asphalt_aloha/assets/illustrations/defaultAgentMiniSpotKtp.svg
+    - packages/asphalt_aloha/assets/illustrations/defaultCommonSpotHeroSomethingWrong.svg
+    - packages/asphalt_aloha/assets/illustrations/defaultPaySpotHeroGobillsAutoRepaymentOnboarding.svg
+    - packages/asphalt_aloha/assets/illustrations/defaultBusinessSpotHeroPromo.svg
+    - packages/asphalt_aloha/assets/illustrations/defaultPaySpotHeroQrCodeNotRecognised.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation24Search.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation16EraseText.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation24NextIos.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation16NextIos.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation24Search.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation24Next.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation24ExpandLess.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation24ExpandMore.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation16ExpandMore.svg
+    - packages/asphalt_aloha/assets/icons/icLabel24Correct.svg
+    - packages/asphalt_aloha/assets/icons/icLabel24Contact.svg
+    - packages/asphalt_aloha/assets/icons/icActions24Add.svg
+    - packages/asphalt_aloha/assets/icons/icActions24Add.svg
+    - packages/asphalt_aloha/assets/icons/icActions24Info.svg
+    - packages/asphalt_aloha/assets/icons/icActions16Copy.svg
+    - packages/asphalt_aloha/assets/icons/icActions16Info.svg
+    - packages/asphalt_aloha/assets/icons/icCommunication24SendChat.svg
+    - packages/asphalt_aloha/assets/illustrations/defaultTransportMiniSpotTipsAndTricks.svg
+    - packages/asphalt_aloha/assets/icons/icMultimedia24OtherNotification.svg
+    - packages/asphalt_aloha/assets/icons/icNavigation16Edit.svg
+    - packages/asphalt_aloha/assets/icons/icPayments24AutoPay.svg
 
+  fonts:
+    - family: GoPaySerif
+      fonts:
+        - asset: packages/asphalt_aloha/assets/fonts/gopay_serif_semi_bold.otf
+          weight: 600
+    - family: RedHatDisplay
+      fonts:
+        - asset: packages/asphalt_aloha/assets/fonts/red_hat_display_bold.ttf
+          weight: 700
+        - asset: packages/asphalt_aloha/assets/fonts/red_hat_display_regular.ttf
+          weight: 400
+        - asset: packages/asphalt_aloha/assets/fonts/red_hat_display_semi_bold.ttf
+          weight: 600
 
   # fonts:
   #   - family: Schyler

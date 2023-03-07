@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "50.0.0"
+  analytics_api:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/analytics/analytics_api"
+      relative: true
+    source: path
+    version: "0.0.1"
   analyzer:
     dependency: transitive
     description:
@@ -22,6 +29,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.7"
+  app_feature:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/app_feature"
+      relative: true
+    source: path
+    version: "0.0.1"
+  app_identifiers:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/app_identifiers"
+      relative: true
+    source: path
+    version: "0.0.1"
+  app_settings:
+    dependency: transitive
+    description:
+      name: app_settings
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.8"
   archive:
     dependency: transitive
     description:
@@ -40,11 +68,11 @@ packages:
     dependency: "direct main"
     description:
       path: asphalt_aloha
-      ref: "0.0.43"
-      resolved-ref: e1c2fff681a4efc79efb29c41af874e8924b046d
+      ref: "0.0.44"
+      resolved-ref: "8baa2e2f701acca97208029d4dbbad0064dba0ca"
       url: "git@source.golabs.io:asphalt/asphalt-aloha-flutter.git"
     source: git
-    version: "0.0.43"
+    version: "0.0.44"
   async:
     dependency: transitive
     description:
@@ -52,13 +80,34 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.9.0"
+  auth_sdk_api:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/auth_sdk/auth_sdk_api"
+      relative: true
+    source: path
+    version: "0.0.1"
+  barcode:
+    dependency: "direct main"
+    description:
+      name: barcode
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.2.3"
+  barcode_widget:
+    dependency: transitive
+    description:
+      name: barcode_widget
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.3"
   bloc:
     dependency: "direct main"
     description:
       name: bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "8.1.0"
+    version: "7.2.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -80,6 +129,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  build_config_provider:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/build_config_provider"
+      relative: true
+    source: path
+    version: "0.0.1"
   build_daemon:
     dependency: transitive
     description:
@@ -122,6 +178,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "8.4.3"
+  cached_network_image:
+    dependency: transitive
+    description:
+      name: cached_network_image
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.1"
+  cached_network_image_platform_interface:
+    dependency: transitive
+    description:
+      name: cached_network_image_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  cached_network_image_web:
+    dependency: transitive
+    description:
+      name: cached_network_image_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   carousel_slider:
     dependency: "direct main"
     description:
@@ -143,6 +220,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
+  clickstream_dart_proto:
+    dependency: transitive
+    description:
+      path: "."
+      ref: "4.179.6"
+      resolved-ref: "8a8d1aeef165e779d5b20ea9260f06c5feb9e2f4"
+      url: "git@source.golabs.io:mobile/clickstream-dart-proto.git"
+    source: git
+    version: "4.179.6"
   clock:
     dependency: transitive
     description:
@@ -164,6 +250,69 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
+  common_widgets:
+    dependency: "direct main"
+    description:
+      path: "e:/code/gopay-consumer/shared/common_widgets"
+      relative: false
+    source: path
+    version: "0.0.1"
+  config_provider:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/config_provider"
+      relative: true
+    source: path
+    version: "0.0.1"
+  connectivity_plus:
+    dependency: transitive
+    description:
+      name: connectivity_plus
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.3.9"
+  connectivity_plus_linux:
+    dependency: transitive
+    description:
+      name: connectivity_plus_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.1"
+  connectivity_plus_macos:
+    dependency: transitive
+    description:
+      name: connectivity_plus_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.6"
+  connectivity_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: connectivity_plus_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.4"
+  connectivity_plus_web:
+    dependency: transitive
+    description:
+      name: connectivity_plus_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.5"
+  connectivity_plus_windows:
+    dependency: transitive
+    description:
+      name: connectivity_plus_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.2"
+  contacts_service:
+    dependency: transitive
+    description:
+      name: contacts_service
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.3"
   convert:
     dependency: transitive
     description:
@@ -171,6 +320,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.1"
+  copies:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/copies"
+      relative: true
+    source: path
+    version: "0.0.1"
+  cross_file:
+    dependency: transitive
+    description:
+      name: cross_file
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.3+4"
   crypto:
     dependency: transitive
     description:
@@ -192,6 +355,62 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.4"
+  dbus:
+    dependency: transitive
+    description:
+      name: dbus
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.4"
+  deeplink:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/deeplink"
+      relative: true
+    source: path
+    version: "0.0.1"
+  device_info_plus:
+    dependency: transitive
+    description:
+      name: device_info_plus
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.0"
+  device_info_plus_linux:
+    dependency: transitive
+    description:
+      name: device_info_plus_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
+  device_info_plus_macos:
+    dependency: transitive
+    description:
+      name: device_info_plus_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.2.3"
+  device_info_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: device_info_plus_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.6.1"
+  device_info_plus_web:
+    dependency: transitive
+    description:
+      name: device_info_plus_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
+  device_info_plus_windows:
+    dependency: transitive
+    description:
+      name: device_info_plus_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.1"
   dio:
     dependency: "direct main"
     description:
@@ -219,7 +438,7 @@ packages:
       name: ffi
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.1"
+    version: "1.2.1"
   file:
     dependency: transitive
     description:
@@ -239,6 +458,34 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_bloc:
+    dependency: transitive
+    description:
+      name: flutter_bloc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "7.3.3"
+  flutter_blurhash:
+    dependency: transitive
+    description:
+      name: flutter_blurhash
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.7.0"
+  flutter_cache_manager:
+    dependency: transitive
+    description:
+      name: flutter_cache_manager
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.3.0"
+  flutter_inappwebview:
+    dependency: transitive
+    description:
+      name: flutter_inappwebview
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.4.3+8"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -251,6 +498,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_slidable:
+    dependency: transitive
+    description:
+      name: flutter_slidable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.0"
   flutter_svg:
     dependency: transitive
     description:
@@ -282,6 +536,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.2.0"
+  generic_success_screen:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/payment_experience/generic_success_screen"
+      relative: true
+    source: path
+    version: "0.0.1"
   get:
     dependency: "direct main"
     description:
@@ -310,6 +571,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
+  goclub_sdk:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/user_spend/goclub_sdk"
+      relative: true
+    source: path
+    version: "0.0.1"
   google_fonts:
     dependency: "direct main"
     description:
@@ -324,6 +592,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.0"
+  group_list_view:
+    dependency: transitive
+    description:
+      name: group_list_view
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.1"
+  health_tracker:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/health_tracker/health_tracker"
+      relative: true
+    source: path
+    version: "0.0.1"
+  health_tracker_impl:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/health_tracker/health_tracker_impl"
+      relative: true
+    source: path
+    version: "0.0.1"
   http:
     dependency: transitive
     description:
@@ -387,6 +676,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.7.0"
+  json_codable:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/json_codable"
+      relative: true
+    source: path
+    version: "0.0.1"
   json_serializable:
     dependency: "direct dev"
     description:
@@ -401,6 +697,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  local_broadcast:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/local_broadcast"
+      relative: true
+    source: path
+    version: "0.0.1"
   logging:
     dependency: "direct main"
     description:
@@ -414,7 +717,7 @@ packages:
       name: lottie
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "1.4.3"
   matcher:
     dependency: transitive
     description:
@@ -443,6 +746,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  module_configuration_api:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/host_app/module_configuration_api"
+      relative: true
+    source: path
+    version: "0.0.1"
+  navigation:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/navigation"
+      relative: true
+    source: path
+    version: "0.0.1"
   nested:
     dependency: transitive
     description:
@@ -450,6 +767,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  network_sdk:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/network_sdk"
+      relative: true
+    source: path
+    version: "0.0.1"
+  nm:
+    dependency: transitive
+    description:
+      name: nm
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.0"
+  octo_image:
+    dependency: transitive
+    description:
+      name: octo_image
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   package_config:
     dependency: transitive
     description:
@@ -457,6 +795,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  page_provider:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/page_provider"
+      relative: true
+    source: path
+    version: "0.0.1"
   path:
     dependency: transitive
     description:
@@ -526,7 +871,42 @@ packages:
       name: path_provider_windows
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.3"
+    version: "2.0.7"
+  payment_widget_sdk:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/payment_experience/payment_widget_sdk"
+      relative: true
+    source: path
+    version: "0.0.1"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.11.1"
+  permission_handler:
+    dependency: transitive
+    description:
+      name: permission_handler
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "8.3.0"
+  permission_handler_platform_interface:
+    dependency: transitive
+    description:
+      name: permission_handler_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.9.0"
+  persistence_sdk:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/persistence_sdk"
+      relative: true
+    source: path
+    version: "0.0.1"
   petitparser:
     dependency: transitive
     description:
@@ -534,6 +914,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.0"
+  pin_sdk_api:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/consumer/pin_sdk/pin_sdk_api"
+      relative: true
+    source: path
+    version: "0.0.1"
   platform:
     dependency: transitive
     description:
@@ -547,7 +934,7 @@ packages:
       name: plugin_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.3"
+    version: "2.1.2"
   pointycastle:
     dependency: transitive
     description:
@@ -569,6 +956,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  protobuf:
+    dependency: transitive
+    description:
+      name: protobuf
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   provider:
     dependency: "direct main"
     description:
@@ -590,6 +984,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.1"
+  pull_to_refresh_flutter3:
+    dependency: transitive
+    description:
+      name: pull_to_refresh_flutter3
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
+  qr:
+    dependency: transitive
+    description:
+      name: qr
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.1"
+  quiver:
+    dependency: transitive
+    description:
+      name: quiver
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.1"
   retrofit:
     dependency: "direct main"
     description:
@@ -604,6 +1019,76 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.0"
+  router:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/router"
+      relative: true
+    source: path
+    version: "0.0.1"
+  rxdart:
+    dependency: transitive
+    description:
+      name: rxdart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.27.7"
+  screenshot:
+    dependency: transitive
+    description:
+      name: screenshot
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.0"
+  service_provider:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/service_provider"
+      relative: true
+    source: path
+    version: "0.0.1"
+  share_plus:
+    dependency: transitive
+    description:
+      name: share_plus
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.5.0"
+  share_plus_linux:
+    dependency: transitive
+    description:
+      name: share_plus_linux
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
+  share_plus_macos:
+    dependency: transitive
+    description:
+      name: share_plus_macos
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.1"
+  share_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: share_plus_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.2.0"
+  share_plus_web:
+    dependency: transitive
+    description:
+      name: share_plus_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
+  share_plus_windows:
+    dependency: transitive
+    description:
+      name: share_plus_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -632,6 +1117,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.3"
+  shared_preferences_persistence:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/shared_preferences_persistence"
+      relative: true
+    source: path
+    version: "0.0.1"
   shared_preferences_platform_interface:
     dependency: transitive
     description:
@@ -707,6 +1199,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.0"
+  sprintf:
+    dependency: transitive
+    description:
+      name: sprintf
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.0.2"
+  sqflite:
+    dependency: transitive
+    description:
+      name: sqflite
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.2.3"
+  sqflite_common:
+    dependency: transitive
+    description:
+      name: sqflite_common
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.4.2+2"
   stack_trace:
     dependency: transitive
     description:
@@ -735,6 +1248,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.1"
+  styled_text:
+    dependency: transitive
+    description:
+      name: styled_text
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.0+1"
+  synchronized:
+    dependency: transitive
+    description:
+      name: synchronized
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.1"
+  tagihan:
+    dependency: "direct main"
+    description:
+      path: "e:/code/gopay-consumer/tagihan"
+      relative: false
+    source: path
+    version: "0.0.1"
   term_glyph:
     dependency: transitive
     description:
@@ -756,6 +1290,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  transaction_status:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/payment_experience/transaction_status"
+      relative: true
+    source: path
+    version: "0.0.1"
   tuple:
     dependency: transitive
     description:
@@ -776,7 +1317,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.1.6"
+    version: "6.0.17"
   url_launcher_android:
     dependency: transitive
     description:
@@ -797,14 +1338,14 @@ packages:
       name: url_launcher_linux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
+    version: "2.0.3"
   url_launcher_macos:
     dependency: transitive
     description:
       name: url_launcher_macos
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
+    version: "2.0.3"
   url_launcher_platform_interface:
     dependency: transitive
     description:
@@ -825,7 +1366,21 @@ packages:
       name: url_launcher_windows
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.1"
+    version: "2.0.2"
+  utils:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/utils"
+      relative: true
+    source: path
+    version: "0.0.0"
+  uuid:
+    dependency: transitive
+    description:
+      name: uuid
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.7"
   vector_math:
     dependency: transitive
     description:
@@ -847,13 +1402,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.3.0"
+  web_view:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/web_view"
+      relative: true
+    source: path
+    version: "0.0.1"
+  widget_provider_api:
+    dependency: transitive
+    description:
+      path: "../gopay-consumer/shared/core_infrastructure/widget_provider/api"
+      relative: true
+    source: path
+    version: "0.0.1"
   win32:
     dependency: transitive
     description:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.1.1"
+    version: "2.6.1"
   xdg_directories:
     dependency: transitive
     description:
@@ -868,6 +1437,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.0"
+  xmlstream:
+    dependency: transitive
+    description:
+      name: xmlstream
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   yaml:
     dependency: transitive
     description:

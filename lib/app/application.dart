@@ -52,8 +52,8 @@ class _ApplicationState extends State<Application> {
 
   Widget getAlohaApp() {
     return AlohaApp(
-      theme: AlohaThemeData.purpleThemeLight(),
-      darkTheme: AlohaThemeData.gopayThemeDark(),
+      theme: AlohaThemeData.greenThemeLight(),
+      darkTheme: AlohaThemeData.greenThemeDark(),
       themeMode: AlohaThemeMode.light,
       initialRoute: AppRoutes.initialRoute,
       onGenerateRoute: AppRoutes.generateRoute,
