@@ -15,7 +15,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  get: ^4.6.5
   get_storage:
   logging:
   url_launcher:
@@ -24,17 +23,11 @@ dependencies:
   shimmer:
   google_fonts:
   sliver_tools:
-  asphalt_aloha:
-    git:
-      url: git@source.golabs.io:asphalt/asphalt-aloha-flutter.git
-      path: asphalt_aloha
-      ref: 0.0.44
 
   flutter_localizations:
     sdk: flutter
 
   intl:
-  injectable: ^1.5.0
   equatable: ^2.0.3
   injectable_generator:
   # sdui: ^0.1.180
@@ -46,7 +39,6 @@ dependencies:
   shared_preferences:
   json_annotation:
   lottie:
-  carousel_slider: ^4.2.1
 
 
   # The following adds the Cupertino Icons font to your application.
