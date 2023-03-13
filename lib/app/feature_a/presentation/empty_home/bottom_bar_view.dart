@@ -249,6 +249,11 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    widget.tabIconData?.animationController?.dispose();
+    super.dispose();
+  }
   void setAnimation() {
     widget.tabIconData?.animationController?.reset();
     widget.tabIconData?.animationController?.forward();
