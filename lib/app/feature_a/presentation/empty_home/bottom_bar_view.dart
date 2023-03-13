@@ -26,6 +26,13 @@ class _BottomBarViewState extends State<BottomBarView>
   AnimationController? actionButtonAnimationController;
 
   @override
+  void dispose() {
+    animationController?.dispose();
+    actionButtonAnimationController?.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     animationController = AnimationController(
       vsync: this,
