@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:asphalt_aloha/asphalt_aloha.dart';
 import 'package:barcode/barcode.dart';
 import 'package:common_widgets/common_widgets.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:oren/app/core/app_routes.dart';
 import 'package:oren/app/feature_a/presentation/bevel_button_widget.dart';
 import 'package:oren/app/feature_a/presentation/empty_home/sample_empty_home.dart';
@@ -182,7 +183,480 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: 24),
                   SizedBox(height: 33, child: InstructionListWidget()),
                   const SizedBox(height: 24),
-                  SizedBox(height: 73, child: CommonLoadingWidget())
+                  SizedBox(height: 73, child: CommonLoadingWidget()),
+                  const SizedBox(height: 24),
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Text(
+                        "Your business",
+                        style: AlohaTheme.of(context)
+                            .textTheme
+                            .titleSmallDemiDefault,
+                      ),
+                    ),
+                  ]),
+                  Container(
+                    decoration:
+                        getBoxCardDecoration(context, CardDecoration.top),
+                    child: Padding(
+                      padding: const EdgeInsets.all(0.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Row(
+                              children: [
+                                AlohaIcon(
+                                  icon: IconName.navigation24Notification,
+                                ),
+                                Expanded(
+                                    child: Padding(
+                                  padding: const EdgeInsets.only(left: 16.0),
+                                  child: Text(
+                                    "Public Business Profile",
+                                    style: AlohaTheme.of(context)
+                                        .textTheme
+                                        .titleTinyDemiDefault,
+                                  ),
+                                )),
+                                AlohaIcon(icon: IconName.navigation24NextIos),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 18.0),
+                            child: AlohaDivider(dividerType: DividerType.plain),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration:
+                        getBoxCardDecoration(context, CardDecoration.none),
+                    child: Padding(
+                      padding: const EdgeInsets.all(0.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Row(
+                              children: [
+                                AlohaIcon(
+                                  icon:
+                                      IconName.authenticationSecurity24Security,
+                                ),
+                                Expanded(
+                                    child: Padding(
+                                  padding: const EdgeInsets.only(left: 16.0),
+                                  child: Text(
+                                    "Manage Users",
+                                    style: AlohaTheme.of(context)
+                                        .textTheme
+                                        .titleTinyDemiDefault,
+                                  ),
+                                )),
+                                AlohaIcon(icon: IconName.navigation24NextIos),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 18.0),
+                            child: AlohaDivider(dividerType: DividerType.plain),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration:
+                        getBoxCardDecoration(context, CardDecoration.bottom),
+                    child: Padding(
+                      padding: const EdgeInsets.all(0.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Row(
+                              children: [
+                                AlohaIcon(
+                                  icon: IconName.communication24Language,
+                                ),
+                                Expanded(
+                                    child: Padding(
+                                  padding: const EdgeInsets.only(left: 16.0),
+                                  child: Text(
+                                    "Manage Store & QR",
+                                    style: AlohaTheme.of(context)
+                                        .textTheme
+                                        .titleTinyDemiDefault,
+                                  ),
+                                )),
+                                AlohaIcon(icon: IconName.navigation24NextIos),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 18.0),
+                            child: AlohaDivider(dividerType: DividerType.plain),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Text(
+                        "Log-in Password",
+                        style: AlohaTheme.of(context)
+                            .textTheme
+                            .titleSmallDemiDefault,
+                      ),
+                    ),
+                  ]),
+                  Container(
+                    decoration:
+                        getBoxCardDecoration(context, CardDecoration.card),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 18.0, left: 18.0),
+                                    child: Expanded(
+                                      child: Text(
+                                        "Enable password Log-in",
+                                        style: AlohaTheme.of(context)
+                                            .textTheme
+                                            .titleTinyDemiDefault,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 18.0, bottom: 18, top: 4),
+                                    child: Flexible(
+                                      child: Text(
+                                        "You will be able to use a password  to\nlog-in with your phone number or\nemail.",
+                                        style: AlohaTheme.of(context)
+                                            .textTheme
+                                            .bodySmallDefault,
+                                        maxLines: 4,
+                                        softWrap: true,
+                                        textAlign: TextAlign.justify,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 18.0),
+                          child:
+                              AlohaToggle(value: true, onChanged: (val) => {}),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Container(
+                    decoration:
+                        getBoxCardDecoration(context, CardDecoration.card),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 16.0, left: 16, bottom: 16),
+                          child: SizedBox(
+                            width: 64,
+                            height: 64,
+                            child: SvgPicture.asset(
+                                'assets/image2/gallery_permission.svg'),
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 18.0, left: 18.0),
+                                    child: Expanded(
+                                      child: Text(
+                                        "Icon",
+                                        style: AlohaTheme.of(context)
+                                            .textTheme
+                                            .titleTinyDemiDefault,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        left: 18.0, bottom: 18, top: 4),
+                                    child: Flexible(
+                                      child: Text(
+                                        "No Icon added",
+                                        style: AlohaTheme.of(context)
+                                            .textTheme
+                                            .bodySmallDefault,
+                                        maxLines: 4,
+                                        softWrap: true,
+                                        textAlign: TextAlign.justify,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: AlohaSecondaryButton.positive(
+                            Text("Edit"),
+                            onTap: () {},
+                            state: AlohaButtonState.inactive,
+                            size: AlohaButtonSize.tiny,
+                            leftIcon: AlohaIcon(
+                              icon: IconName.actions16Add,
+                            ),
+                            rightIcon: AlohaIcon(
+                              icon: IconName.actions16Add,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Container(
+                    color: AlohaTheme.of(context).colors.fillBackgroundSecondary,  //can't using navbar background color, class is internal
+                    child: SvgPicture.asset(
+                        'assets/image2/status_bar.svg'),
+                  ),
+                  AlohaNavBar(
+                    decoration: NavBarDecoration.none,
+                    navigationIcon: IconName.navigation24Back,
+                    onNavigationIconTap: ()=>{},
+                    logo: null,
+                    titleContainer: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Title",
+                                  style: AlohaTheme.of(context)
+                                      .textTheme
+                                      .titleModerateDemiDefault,
+                                ),
+                                Text("Subtitle",
+                                    style: AlohaTheme.of(context)
+                                        .textTheme
+                                        .captionSmallBookDefault)
+                              ]),
+                        ),
+                      ],
+                    ),
+                    menuContainer: Row(
+                      children: [
+                        SizedBox(
+                          height: 40,
+                          child: AlohaSecondaryButton.positive(
+                            Text("Action",
+                                style: AlohaTheme.of(context)
+                                    .textTheme
+                                    .bodySmallDefault),
+                            onTap: () {},
+                            state: AlohaButtonState.inactive,
+                            size: AlohaButtonSize.tiny,
+                            leftIcon: AlohaIcon(
+                              icon: IconName.actions16Add,
+                            ),
+                            rightIcon: AlohaIcon(
+                              icon: IconName.actions16Add,
+                            ),
+                          ),
+                        ),
+                        const Padding(padding: EdgeInsets.only(right: 16)),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Container(
+                    color: AlohaTheme.of(context).colors.fillBackgroundSecondary,  //can't using navbar background color, class is internal
+                    child: SvgPicture.asset(
+                        'assets/image2/status_bar.svg'),
+                  ),
+                  AlohaNavBar(
+                    decoration: NavBarDecoration.none,
+                    navigationIcon: IconName.navigation24Back,
+                    logo: null,
+                    titleContainer: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Title",
+                                  style: AlohaTheme.of(context)
+                                      .textTheme
+                                      .titleModerateDemiDefault,
+                                )
+                              ]),
+                        ),
+                      ],
+                    ),
+                    menuContainer: Row(
+                      children: [
+                        SizedBox(
+                          height: 40,
+                          child: AlohaSecondaryButton.positive(
+                            Text("Action",
+                                style: AlohaTheme.of(context)
+                                    .textTheme
+                                    .bodySmallDefault),
+                            onTap: () {},
+                            state: AlohaButtonState.inactive,
+                            size: AlohaButtonSize.tiny,
+                            leftIcon: AlohaIcon(
+                              icon: IconName.actions16Add,
+                            ),
+                            rightIcon: AlohaIcon(
+                              icon: IconName.actions16Add,
+                            ),
+                          ),
+                        ),
+                        const Padding(padding: EdgeInsets.only(right: 16)),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Container(
+                    color: AlohaTheme.of(context).colors.fillBackgroundSecondary,  //can't using navbar background color, class is internal
+                    child: SvgPicture.asset(
+                        'assets/image2/status_bar.svg'),
+                  ),
+                  AlohaNavBar(
+                    decoration: NavBarDecoration.none,
+                    navigationIcon: IconName.navigation24Back,
+                    logo: null,
+                    titleContainer: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Title",
+                                  style: AlohaTheme.of(context)
+                                      .textTheme
+                                      .titleModerateDemiDefault,
+                                )
+                              ]),
+                        ),
+                      ],
+                    ),
+                    menuContainer: null,
+                  ),
+                  const SizedBox(height: 24),
+                  Container(
+                    color: AlohaTheme.of(context).colors.fillBackgroundSecondary,  //can't using navbar background color, class is internal
+                    child: SvgPicture.asset(
+                        'assets/image2/status_bar.svg'),
+                  ),
+                  AlohaNavBar(
+                    decoration: NavBarDecoration.none,
+                    navigationIcon: IconName.navigation24Back,
+                    logo: null,
+                    titleContainer: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Title",
+                                  style: AlohaTheme.of(context)
+                                      .textTheme
+                                      .titleModerateDemiDefault,
+                                ),
+                                Text("Subtitle",
+                                    style: AlohaTheme.of(context)
+                                        .textTheme
+                                        .captionSmallBookDefault)
+                              ]),
+                        ),
+                      ],
+                    ),
+                    menuContainer: null,
+                  ),
+
+                  const SizedBox(height: 24),
+                  Container(
+                    color: AlohaTheme.of(context).colors.fillBackgroundSecondary,  //can't using navbar background color, class is internal
+                    child: SvgPicture.asset(
+                        'assets/image2/status_bar.svg'),
+                  ),
+                  AlohaNavBar(
+                    decoration: NavBarDecoration.line,
+                    navigationIcon: null,
+                    logo: null,
+                    titleContainer: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Title",
+                                  style: AlohaTheme.of(context)
+                                      .textTheme
+                                      .titleModerateDemiDefault,
+                                ),
+                              ]),
+                        ),
+                      ],
+                    ),
+                    menuContainer: null,
+                  ),
                 ],
               ),
             ),
