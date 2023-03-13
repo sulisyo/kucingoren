@@ -45,12 +45,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
-  tagihan:
-    path: e:/code/gopay-consumer/tagihan
-
-  common_widgets:
-    path: e:/code/gopay-consumer/shared/common_widgets
-
 #  home:
 #    path: e:/code/gopay-consumer/consumer/home
   barcode:
